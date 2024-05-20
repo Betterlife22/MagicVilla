@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // AddNewtonsoftJson để làm http patch
 builder.Services.AddControllers(option=>
 option.ReturnHttpNotAcceptable=true).AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
-builder.Services.AddSingleton<ILogging,Logging>();
+//builder.Services.AddSingleton<ILogging,Logging>();
 //AddXmlDataContractSerializerFormatters() option: thêm format xml cho web
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
