@@ -13,7 +13,7 @@ namespace MagicVilla_VillaAPI.Repository.IRepository
         public Repository(ApplicationDbContext db)
         {
             _db = db;
-            this._db.Set<T>();
+            this.DbSet= _db.Set<T>();
 
         }
         public async Task CreateAsync(T entity)
@@ -42,7 +42,7 @@ namespace MagicVilla_VillaAPI.Repository.IRepository
 
 
 
-        public async Task<T> GetVillaAsync(Expression<Func<T, bool>> filter = null, bool track = true)
+        public async Task<T> GetAsync(Expression<Func<T, bool>> filter = null, bool track = true)
         {
             IQueryable<T> query = DbSet;
             if (!track)
