@@ -7,7 +7,7 @@ namespace MagicVilla_VillaAPI.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
+        public int Id { get; set; }
         public string name { get; set; }
         public string details { get; set; }
         public double rate { get; set; }
